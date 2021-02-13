@@ -6,8 +6,6 @@ import urllib.request
 import json
 from discord.ext import commands
 
-key = 'ODAzNzc5MzI2Mjg5Mzc5NDA4.YBCv1A.BC99yyh_znyAB101qGZG5EZkLj4'
-
 #client (my bot)
 client = commands.Bot(command_prefix = "!")
 client.remove_command('help')
@@ -274,4 +272,4 @@ async def link(ctx, *, arg):
         await ctx.send(embed=link)
 
 #Rum the client on the server
-client.run(key)
+client.run(discord_token)
