@@ -1,4 +1,2 @@
 discord.py
-urllib.request
-json
 discord.exe
