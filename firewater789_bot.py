@@ -81,10 +81,7 @@ async def png(ctx, *, arg):
         png.add_field(name = 'WLGang', value = '\n'.join(wlgang), inline = True)
         png.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=png)
-#item box
-@client.command()
-async def png(ctx, *, arg):
-    if(arg == 'box'):
+    elif(arg == 'box'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/master/Boxes/itemBox.png") as resp:
                 if resp.status != 200:
