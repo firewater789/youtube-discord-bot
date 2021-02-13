@@ -81,8 +81,8 @@ async def png(ctx, *, arg):
         png.add_field(name = 'WLGang', value = '\n'.join(wlgang), inline = True)
         png.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=png)
-    #item box
-    @client.command()
+#item box
+@client.command()
 async def png(ctx, *, arg):
     if(arg == 'box'):
         async with aiohttp.ClientSession() as session:
