@@ -13,7 +13,7 @@ client = commands.Bot(command_prefix = "!")
 client.remove_command('help')
 #discord.Client()
 
-fortuneBox = ['fortune box', 'fortune box legendary', 'fortune box epic', 'fortune box rare', 'fortune box common',]
+fortuneBox = ['fortune box', 'fortune box legendary']
 
 premiumBox = ['premium box', 'premium box legendary']
 
