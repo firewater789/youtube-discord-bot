@@ -1,5 +1,7 @@
 import discord
 import random
+import io
+import aiohttp
 import urllib.request
 import json
 from discord.ext import commands
@@ -80,8 +82,15 @@ async def png(ctx, *, arg):
         png.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=png)
     #item box
-    elif(arg == 'mix box' or arg == 'item box'):
-        await ctx.send(file=discord.File('itemBox.png'))
+    @client.command()
+async def png(ctx, *, arg):
+    if(arg == 'box'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/master/Boxes/itemBox.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'itemBox.png'))
     elif(arg == 'mix box legendary' or arg == 'item box legendary'):
         await ctx.send(file=discord.File('itemBoxLegendary.png'))
     elif(arg == 'mix box epic' or arg == 'item box epic'):
