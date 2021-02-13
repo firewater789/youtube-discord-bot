@@ -272,4 +272,4 @@ async def link(ctx, *, arg):
         await ctx.send(embed=link)
 
 #Rum the client on the server
-client.run(process.env.discord_token)
+client.run(str(discord_token))
