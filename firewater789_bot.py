@@ -82,10 +82,7 @@ async def png(ctx, *, arg):
         png.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=png)
     elif(arg == 'box'):
-        async with aiohttp.ClientSession() as session:
-            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/master/Boxes/itemBox.png") as resp:
-                data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, 'itemBox.png'))
+        await ctx.send('no png yet')
     elif(arg == 'mix box legendary' or arg == 'item box legendary'):
         await ctx.send(file=discord.File('itemBoxLegendary.png'))
     elif(arg == 'mix box epic' or arg == 'item box epic'):
