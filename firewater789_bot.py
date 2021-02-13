@@ -13,9 +13,9 @@ client.remove_command('help')
 
 fortuneBox = ['fortune box', 'fortune box legendary', 'fortune box epic', 'fortune box rare', 'fortune box common',]
 
-premiumBox = ['premium box', 'premium box legendary', 'premium box epic']
+premiumBox = ['premium box', 'premium box legendary']
 
-premiumPack = ['premium pack', 'premium pack legendary', 'premium pack epic']
+premiumPack = ['premium pack', 'premium pack legendary']
 
 itemBoxes = ['item box', 'item box legendary', 'item box epic', 'item box rare', 'item box common', 'sliver box',
             'sliver box legendary', 'sliver box epic', 'sliver box rare', 'sliver box common']
