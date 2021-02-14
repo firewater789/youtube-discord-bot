@@ -20,8 +20,7 @@ premiumBox = ['premium box', 'premium box legendary']
 
 premiumPack = ['premium pack', 'premium pack legendary']
 
-itemBoxes = ['item box', 'item box legendary', 'item box epic', 'item box rare', 'item box common', 'sliver box',
-            'sliver box legendary', 'sliver box epic', 'sliver box rare', 'sliver box common']
+itemBoxes = ['item box', 'item box legendary', 'sliver box', 'sliver box legendary']
 
 arenaBoxes = ['rank 1 box', 'rank 1 box legendary', 'rank 3 box', 'rank 3 box legendary', 'rank 5 box', 'rank 5 box legendary', 
             'rank 7 box', 'rank 7 box legendary', 'rank 10 box', 'rank 10 box legendary', 'rank 12 box',
@@ -42,7 +41,6 @@ async def help(ctx):
         help = discord.Embed(title='These are the possible help commands.', 
         color=discord.Colour.dark_blue())
         help.add_field(name = '!png help', value = 'This will help you on how to use the **!png** command please do **!png help** to learn more', inline = False)
-        help.add_field(name = '!ping help', value = 'This will help you on how to use the **!ping** command please do **!ping help** to learn more', inline = False)
         help.add_field(name = '!link help', value = 'This will help you on how to use the **!link** command please do **!link help** to learn more', inline = False)
         help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=help)
@@ -59,8 +57,8 @@ async def ping(ctx):
 async def png(ctx, *, arg):
     if(arg == 'help'):
         png_help = discord.Embed(title = 'This is the !png help menu.')
-        png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag')
-        png_help.add_field(name = 'special Commands', value = 'Please do **!png list** for the list of commands')
+        png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag', inline = False)
+        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan', inline = False)
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=png_help)
     elif(arg == 'list'):
