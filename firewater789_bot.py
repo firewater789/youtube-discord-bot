@@ -203,12 +203,13 @@ async def on_ready():
 #used to find commands that the bot has
 @client.command()
 async def help(ctx):
+        bot_channel = client.get_channel(810634146727723019)
         help = discord.Embed(title='These are the possible help commands.', 
         color=discord.Colour.dark_blue())
         help.add_field(name = '!png help', value = 'This will help you on how to use the **!png** command please do **!png help** to learn more', inline = False)
         help.add_field(name = '!link help', value = 'This will help you on how to use the **!link** command please do **!link help** to learn more', inline = False)
         help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
-        await ctx.send(embed=help)
+        await ctx.bot_channel(embed=help)
 
 #used to find the ping of the bot
 @client.command()
