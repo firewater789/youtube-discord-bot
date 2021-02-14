@@ -105,7 +105,7 @@ async def png(ctx, *, arg):
         await ctx.send('no png yet')
     #premium pack
     elif(arg == 'pack' or arg == 'premium pack'):
-        await ctx.send(Boxes/premiumPack.png)
+        await ctx.send('no png yet')
     elif(arg == 'premium pack legendary' or arg == 'pack legendary'):
         await ctx.send(file=discord.File('premiumPackLegendary.png'))
     elif(arg == 'pack epic' or arg == 'premium pack epic'):
