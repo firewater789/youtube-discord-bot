@@ -80,7 +80,10 @@ async def png(ctx, *, arg):
         png.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=png)
     elif(arg == 'box'):
-        await ctx.send('no png yet')
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/Lookotza/smBot/master/items/Abomination.png") as resp:
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Abomination.png'))
     elif(arg == 'mix box legendary' or arg == 'item box legendary'):
         await ctx.send(file=discord.File('itemBoxLegendary.png'))
     elif(arg == 'mix box epic' or arg == 'item box epic'):
