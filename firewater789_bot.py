@@ -38,7 +38,7 @@ async def on_ready():
 
 #used to find commands that the bot has
 @client.command()
-async def help(ctx, *, arg):
+async def help(ctx):
         help = discord.Embed(title='These are the possible help commands.', 
         color=discord.Colour.dark_blue())
         help.add_field(name = '!png help', value = 'This will help you on how to use the **!png** command please do **!png help** to learn more', inline = False)
@@ -62,6 +62,7 @@ async def png(ctx, *, arg):
         png.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag')
         png.add_field(name = 'special Commands', value = 'Please do **!png list** for the list of commands')
         png.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png)
     elif(arg == 'list'):
         png = discord.Embed(title = 'List of all png', description = 'Here is a list of all png that are in the code as of right now')
         png.add_field(name = 'Fortune box', value = '\n'.join(fortuneBox), inline = True)
