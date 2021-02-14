@@ -179,27 +179,28 @@ async def png(ctx, *, arg):
     #other
     elif(arg == 'logo' or arg == 'supermechs'):
         await ctx.send(file=discord.File('supermechs.png'))
+    #Torsos
     elif(arg == 'interceptor'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('https://github.com/firewater789/youtube-discord-bot/main/torso/Interceptor.png') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Interceptor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await ctx.send(file=discord.File(data, 'Interceptor.png'))
     elif(arg == 'nightmare'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Nightmare.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Nightmare.png'))
     elif(arg == 'sith'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Sith.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Sith.png'))
     elif(arg == 'archimond'):
         async with aiohttp.ClientSession() as session:
             async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Archimonde.png') as resp:
@@ -209,144 +210,144 @@ async def png(ctx, *, arg):
                 await ctx.send(file=discord.File(data, 'Archimonde.png'))
     elif(arg == 'avenger'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Avenger.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Avenger.png'))
     elif(arg == 'energy free armor' or arg == 'efa'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/EnergyFreeArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'EnergyFreeArmor.png'))
     elif(arg == 'hollow spectral armor' or arg == 'physical monkey'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/HollowSpectralArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'HollowSpectralArmor.png'))
     elif(arg == 'hollow cyber armor' or arg == 'physical cyber'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/HollowCyberArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'HollowCyberArmor.png'))
     elif(arg == 'rusty energy armor' or arg == 'energy monkey'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/RustyEnergyArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'RustyEnergyArmor.png'))
     elif(arg == 'rusty cyber armor' or arg == 'energy cyber'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/RustyCyberArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'RustyCyberArmor.png'))
     elif(arg == 'fractured heat armor' or arg == 'heat monkey'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/FracturedHeatArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'FracturedHeatArmor.png'))
     elif(arg == 'fractured cyber armor' or arg == 'heat cyber'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/FracturedCyberArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'FracturedCyberArmor.png'))
     elif(arg == 'hardened platinum vest' or arg == 'physical vest' or arg == 'hpv'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/HardenedPlatinumVest.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'HardenedPlatinumVest.png'))
     elif(arg == 'molten platinum vest' or arg == 'heat vest' or arg == 'mpv'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/MoltenPlatinumVest.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'MoltenPlatinumVest.png'))
     elif(arg == 'lightning platinum vest' or arg == 'energy vest' or arg == 'lpv'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/LightningPlatinumVest.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'LightningPlatinumVest.png'))
     elif(arg == 'battery armor'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/BatteryArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'BatteryArmor.png'))
     elif(arg == 'flame battery armor'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/FlamingBatteryArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'FlamingBatteryArmor.png'))
     elif(arg == 'energy battery armor'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/EnergyBatteryArmor.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'EnergyBatteryArmor.png'))
     elif(arg == 'naga'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Naga.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Naga.png'))
     elif(arg == 'zarkares'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Zarkares.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Zarkares.png'))
     elif(arg == 'sabretooth'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Sabretooth.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Sabretooth.png'))
     elif(arg == 'windigo'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Windigo.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Windigo.png'))
     elif(arg == 'brutality'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/Brutality.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'Brutality.png'))
     elif(arg == 'grim reaper'):
         async with aiohttp.ClientSession() as session:
-            async with session.get('') as resp:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/torso/GrimReaper.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await ctx.send(file=discord.File(data, ''))
+                await ctx.send(file=discord.File(data, 'GrimReaper.png'))
 
 #used to find the link of a youtuber
 @client.command()
