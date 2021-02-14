@@ -69,84 +69,90 @@ legs = ['massive lava feet',
         'rolling beasts',
         'the claw']
 
-sideWeapons = ['perimeter protector',
-            'back breaker',
-            'disintegration',  
-            'war hammer',    
-            'seraphblade', 
-            'rock polisher',  
-            'rock recoiler',    
-            'annihilation',
-            'mercy',             
-            'advanced repulser' , 
-            'armor annihilator',
-            'damaged armor annihilator',
-            'sacrifice cannon',   
-            'purifier',         
-            'unrepaired laser cannon',
-            'nightfall',           
-            'bloodweep',
-            'terror cry',            
-            'dark eagle', 
-            'malfunctitoning blaster',
-            'sweetie',            
-            'ejection blast',
-            'last resort vulcan']
-             
-sideWepons2 =['distance controller',
-            'heronmark',        
-            'terrorblade',      
-            'flaming hammer',  
-            'overcooking oven', 
-            'chaos bringer',    
-            'crimson rapture', 
-            'reckoning',       
-            'magma recoiler',  
-            'basalt dissolver', 
-            'broken devourer', 
-            'magma blast',                                      
-            'sorrow',          
-            'abomination',   
-            'heat bomb',        
-            'shadow wolf',     
-            'explosive retreat',
-            'rusty heat blaster',
-            'flaminator',
-            'hybrid heat cannon',
-            'corrupt light',   
-            'dawnblaze',
-            'cracked plasma cannon',
-            'basalt polisher',
-            'misguided rocket battery',
-            'fractured basalt annihilator',
-            'fractured basalt dissolver',
-            'overcharged rocket battery', 
-            'distance generator',
-            'unstable power cell',
-            'brightroar', 
-            'bigdaddy',      
-            'stormweaver',  
-            'ash creator',   
-            'viking hammer', 
-            'lightning recoiler',
-            'bulldog',  
-            'blizzard dissolver',
-            'drunk lightning',
-            'emp',           
-            'mortal bullet',
-            'last words', 
-            'bunker shell',
-            'piercing fox',
-            'evac spark',
-            'scrapped energy blaster',
-            'malice beam',
-            'ultrabright',   
-            'hot flash',     
-            'hybrid energy cannon',
-            'lightning cutter',
-            'obsolete energy cannon',
-            'broken blizzard dissolver',
-            'broken blizzard annihilator']
+sideWeaponsPhysical = ['**physical [23]**',
+                'perimeter protector',
+                'back breaker',
+                'disintegration',  
+                'war hammer',    
+                'seraphblade', 
+                'rock polisher',  
+                'rock recoiler',    
+                'annihilation',
+                'mercy',             
+                'advanced repulser' , 
+                'armor annihilator',
+                'damaged armor annihilator',
+                'sacrifice cannon',   
+                'purifier',         
+                'unrepaired laser cannon',
+                'nightfall',           
+                'bloodweep',
+                'terror cry',            
+                'dark eagle', 
+                'malfunctitoning blaster',
+                'sweetie',            
+                'ejection blast',
+                'last resort vulcan']
+
+                
+sideWeaponsHeat = ['**heat[28]**',
+                'distance controller',
+                'heronmark',        
+                'terrorblade',      
+                'flaming hammer',  
+                'overcooking oven', 
+                'chaos bringer',    
+                'crimson rapture', 
+                'reckoning',       
+                'magma recoiler',  
+                'basalt dissolver', 
+                'broken devourer', 
+                'magma blast', 
+                'sorrow',          
+                'abomination',   
+                'heat bomb',        
+                'shadow wolf',     
+                'explosive retreat',
+                'rusty heat blaster',
+                'flaminator',
+                'hybrid heat cannon',
+                'corrupt light',   
+                'dawnblaze',
+                'cracked plasma cannon',
+                'basalt polisher',
+                'misguided rocket battery',
+                'fractured basalt annihilator',
+                'fractured basalt dissolver',
+                'overcharged rocket battery']
+                
+
+sideWeaponsEnergy =['**Energy[26]**',  
+                'distance generator',
+                'unstable power cell',
+                'brightroar', 
+                'bigdaddy',      
+                'stormweaver',  
+                'ash creator',   
+                'viking hammer', 
+                'lightning recoiler',
+                'bulldog',  
+                'blizzard dissolver',
+                'drunk lightning',
+                'emp',           
+                'mortal bullet',
+                'last words', 
+                'bunker shell',
+                'piercing fox',
+                'evac spark',
+                'scrapped energy blaster',
+                'malice beam',
+                'ultrabright',   
+                'hot flash',     
+                'hybrid energy cannon',
+                'lightning cutter',
+                'obsolete energy cannon',
+                'broken blizzard dissolver',
+                'broken blizzard annihilator']
 
 topWeapons = ['frantic brute',
             'frantic flame',
@@ -238,10 +244,25 @@ async def png(ctx, *, arg):
         png_legs.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_legs)
     elif(arg == 'side weapons' or arg == 'side weapon'):
-        png_sideWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_sideWeapons.add_field(name = 'side weapons', value = '\n'.join(sideWeapons))
+        png_sideWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of commands for side weapons')
+        png_sideWeapons.add_field(name = 'side weapons', value = '!png side weapons physical\n!png side weapons heat\n!png side weapons energy')
         png_sideWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_sideWeapons)
+    elif(arg == 'side weapons physical' or arg == 'side weapon physical'):
+        png_sideWeaponsPhysical = discord.Embed(title = 'List of all Physical side weapons png', description = 'Here is a list of all physical side weapons png that are in the code as of right now')
+        png_sideWeaponsPhysical.add_field(name = 'Physical side weapons', value = '\n'.join(sideWeaponsPhysical))
+        png_sideWeaponsPhysical.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=png_sideWeaponsPhysical)
+    elif(arg == 'side weapons heat' or arg == 'side weapon heat'):
+        png_sideWeaponsHeat = discord.Embed(title = 'List of all Heat side weapons png', description = 'Here is a list of all heat side weapons png that are in the code as of right now')
+        png_sideWeaponsHeat.add_field(name = 'Heat side weapons', value = '\n'.join(sideWeaponsHeat))
+        png_sideWeaponsHeat.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=png_sideWeaponsHeat)
+    elif(arg == 'side weapons energy' or arg == 'side weapon energy'):
+        png_sideWeaponsEnergy = discord.Embed(title = 'List of all Energy side weapons png', description = 'Here is a list of all energy side weapons png that are in the code as of right now')
+        png_sideWeaponsEnergy.add_field(name = 'Energy side weapons', value = '\n'.join(sideWeaponsEnergy))
+        png_sideWeaponsEnergy.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=png_sideWeaponsEnergy)
     elif(arg == 'top weapons' or arg == 'top weapon'):
         png_topWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
         png_topWeapons.add_field(name = 'top weapons', value = '\n'.join(topWeapons))
