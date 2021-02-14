@@ -91,8 +91,9 @@ sideWeapons = ['perimeter protector',
             'malfunctitoning blaster',
             'sweetie',            
             'ejection blast',
-            'last resort vulcan',
-            'distance controller',
+            'last resort vulcan']
+             
+sideWepons2 =['distance controller',
             'heronmark',        
             'terrorblade',      
             'flaming hammer',  
