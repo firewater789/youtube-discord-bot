@@ -69,6 +69,10 @@ async def ping(ctx):
     ping.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
     await ctx.send(embed=ping)
 
+@client.command()
+async def omg(ctx, name):
+    ctx.send('OMG IS IT THE REAL ' + name +', IM YOUR BIGGEST FAN PLEASE SIGN MY LEFT NUT')
+
 #used to find png of stuff in the game
 @client.command()
 async def png(ctx, *, arg):
