@@ -85,6 +85,8 @@ async def png(ctx, *, arg):
     elif(arg == 'box'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/Lookotza/smBot/master/items/Abomination.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await ctx.send(file=discord.File(data, 'Abomination.png'))
     elif(arg == 'mix box legendary' or arg == 'item box legendary'):
