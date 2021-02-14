@@ -28,6 +28,171 @@ arenaBoxes = ['rank 1 box', 'rank 1 box legendary', 'rank 3 box', 'rank 3 box le
 
 wlgang = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye']
 
+torsos = ['interceptor',
+            'nightmare',
+            'sith',
+            'archimond',            
+            'avenger',
+            'hollow spectral armor',
+            'hollow cyber armor',
+            'rusty energy armor',
+            'rusty cyber armor',
+            'fractured heat armor',
+            'fractured cyber armor',
+            'hardened platinum vest',
+            'molten platinum vest',
+            'lightning platinum vest',
+            'battery armor',
+            'flame battery armor',
+            'energy battery armor',
+            'naga',
+            'zarkares',
+            'sabretooth',
+            'energy free armor',  
+            'windigo',
+            'brutality',                          
+            'grim reaper']
+
+legs = ['massive lava feet',
+        'massive shocker feet',
+        'massive stone feet',
+        'iron boots',
+        'scorching feet',
+        'charged walkers',
+        'grave diggers',
+        'dynamic stompers',
+        'recoil stompers',
+        'dynamite boots',
+        'lightning supporters',
+        'devouring paws',
+        'sparked runners',
+        'rolling beasts',
+        'the claw']
+
+sideWeapons = ['**physical [23]**',
+            'perimeter protector',
+            'back breaker',
+            'disintegration',  
+            'war hammer',    
+            'seraphblade', 
+            'rock polisher',  
+            'rock recoiler',    
+            'annihilation',
+            'mercy',             
+            'advanced repulser' , 
+            'armor annihilator',
+            'damaged armor annihilator',
+            'sacrifice cannon',   
+            'purifier',         
+            'unrepaired laser cannon',
+            'nightfall',           
+            'bloodweep',
+            'terror cry',            
+            'dark eagle', 
+            'malfunctitoning blaster',
+            'sweetie',            
+            'ejection blast',
+            'last resort vulcan',
+            '**heat[28]**',
+            'distance controller',
+            'heronmark',        
+            'terrorblade',      
+            'flaming hammer',  
+            'overcooking oven', 
+            'chaos bringer',    
+            'crimson rapture, 
+            'reckoning',       
+            'magma recoiler',  
+            'basalt dissolver', 
+            'broken devourer', 
+            'magma blast',                                      
+            'sorrow',          
+            'abomination',   
+            'heat bomb',        
+            'shadow wolf',     
+            'explosive retreat',
+            'rusty heat blaster,
+            'flaminator',
+            'hybrid heat cannon',
+            'corrupt light',   
+            'dawnblaze',
+            'cracked plasma cannon',
+            'basalt polisher',
+            'misguided rocket battery',
+            'fractured basalt annihilator',
+            'fractured basalt dissolver',
+            'overcharged rocket battery', 
+            '**Energy[26]**',  
+            'distance generator',
+            'unstable power cell',
+            'brightroar', 
+            'bigdaddy',      
+            'stormweaver',  
+            'ash creator',   
+            'viking hammer', 
+            'lightning recoiler',
+            'bulldog',  
+            'blizzard dissolver',
+            'drunk lightning',
+            'emp',           
+            'mortal bullet',
+            'last words', 
+            'bunker shell',
+            'piercing fox',
+            'evac spark',
+            'scrapped energy blaster',
+            'malice beam',
+            'ultrabright',   
+            'hot flash',     
+            'hybrid energy cannon',
+            'lightning cutter',
+            'obsolete energy cannon',
+            'broken blizzard dissolver',
+            'broken blizzard annihilator']
+
+topWeapons = ['frantic brute',
+            'frantic flame',
+            'frantic lightning',
+            'reckless beam',
+            'savagery',
+            'hysteria',
+            'distance shredder',
+            'space invader',
+            'party crasher',
+            'mighty cannon',
+            'desert snake',
+            'spinefall',
+            'cockpit piercer',
+            'cockpit electrocuter',
+            'cockpit burner',
+            'falcon',
+            'flaming scope',
+            'lightning scope',
+            'lazy falcon',
+            'half brunt scope',
+            'electrocuted scope',
+            'night eagle',
+            'spartan carnage',
+            'desert fury',
+            'red rain',
+            'burning shower',
+            'supreme cannon',
+            'desolation',
+            'iron frenzy',
+            'vandal rage',
+            'grim cobra',
+            'vailent sniper',
+            'delerium',
+            'overcompressed disintegration',
+            'overheated heat bomb',
+            'overloaded emp']
+
+drones = ['N/A']
+specials = ['N/A']
+modules = ['N/A']
+mechs = ['god mode']
+clan = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye']
+
 #used to know when the bot goes online
 @client.event
 async def on_ready():
@@ -61,16 +226,60 @@ async def png(ctx, *, arg):
         png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan', inline = False)
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await ctx.send(embed=png_help)
-    elif(arg == 'list'):
-        png = discord.Embed(title = 'List of all png', description = 'Here is a list of all png that are in the code as of right now')
-        png.add_field(name = 'Fortune box', value = '\n'.join(fortuneBox), inline = True)
-        png.add_field(name = 'Premium Box', value = '\n'.join(premiumBox), inline = True)
-        png.add_field(name = 'Premium Pack', value = '\n'.join(premiumPack), inline = True)
-        png.add_field(name = 'Arena Boxes', value = '\n'.join(arenaBoxes), inline = True)
-        png.add_field(name = 'Item and Sliver Boxes', value = '\n'.join(itemBoxes), inline = True)
-        png.add_field(name = 'WLGang', value = '\n'.join(wlgang), inline = True)
-        png.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
-        await ctx.send(embed=png)
+    elif(arg == 'torsos' or arg == 'torso'):
+        png_torsos = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_torsos.add_field(name = 'Torso', value = '\n'.join(torsos))
+        png_torsos.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_torsos)
+    elif(arg == 'legs' or arg == 'leg'):
+        png_legs = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_legs.add_field(name = 'Torso', value = '\n'.join(legs))
+        png_legs.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_legs)
+    elif(arg == 'side weapons' or arg == 'side weapon'):
+        png_sideWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_sideWeapons.add_field(name = 'Torso', value = '\n'.join(sideWeapons))
+        png_sideWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_sideWeapons)
+    elif(arg == 'top weapons' or arg == 'top weapon'):
+        png_topWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_topWeapons.add_field(name = 'Torso', value = '\n'.join(topWeapons))
+        png_topWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_topWeapons)
+    elif(arg == 'drones' or arg == 'drone'):
+        png_drones = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_drones.add_field(name = 'Torso', value = '\n'.join(drones))
+        png_drones.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_drones)
+    elif(arg == 'specials' or arg == 'special'):
+        png_specials = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_specials.add_field(name = 'Torso', value = '\n'.join(specials))
+        png_specials.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_specials)
+    elif(arg == 'modules' or arg == 'module'):
+        png_modules = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_modules.add_field(name = 'Torso', value = '\n'.join(modules))
+        png_modules.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_modules)
+    elif(arg == 'mechs' or arg == 'mech'):
+        png_mechs = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_mechs.add_field(name = 'Torso', value = '\n'.join(mechs))
+        png_mechs.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_mechs)
+    elif(arg == 'clan'):
+        png_clan = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_clan.add_field(name = 'Torso', value = '\n'.join(clan))
+        png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_clan)
+    elif(arg == 'boxes'):
+        png_boxes = discord.Embed(title = 'List of all box png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_boxes.add_field(name = 'Fortune box', value = '\n'.join(fortuneBox), inline = True)
+        png_boxes.add_field(name = 'Premium Box', value = '\n'.join(premiumBox), inline = True)
+        png_boxes.add_field(name = 'Premium Pack', value = '\n'.join(premiumPack), inline = True)
+        png_boxes.add_field(name = 'Arena Boxes', value = '\n'.join(arenaBoxes), inline = True)
+        png_boxes.add_field(name = 'Item and Sliver Boxes', value = '\n'.join(itemBoxes), inline = True)
+        png_boxes.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=png_boxes)
     elif(arg == 'item box' or arg == 'mix box'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png") as resp:
