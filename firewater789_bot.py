@@ -496,7 +496,549 @@ async def png(ctx, *, arg):
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await ctx.send(file=discord.File(data, 'SparkedRunners.png'))                 
+    elif(arg == 'perimeter protector'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/PerimeterProtector.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'PerimeterProtector.png'))
+    elif(arg == 'back breaker'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BackBreaker.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BackBreaker.png'))
+    elif(arg == 'disintegration'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Disintegration.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Disintegration.png'))
+    elif(arg == 'war hammer'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/WarHammer.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'WarHammer.png'))
+    elif(arg == 'seraphblade'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/SeraphBlade.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'SeraphBlade.png'))
+    elif(arg == 'rock recoiler'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/RockRecoiler.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'RockRecoiler.png'))
+    elif(arg == 'annihilation'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Annihilation.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Annihilation.png'))
+    elif(arg == 'mercy'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Mercy.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Mercy.png'))
+    elif(arg == 'advanced repulser'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/AdvancedRepulser.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'AdvancedRepulser.png'))
+    elif(arg == 'armor annihilator'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/ArmorAnnihilator.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'ArmorAnnihilator.png'))
+    elif(arg == 'sacrifice cannon'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/SacrificeCannon.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'SacrificeCannon.png'))
+    elif(arg == 'purifier'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Purifier.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Purifier.png'))
+    elif(arg == 'unrepaired laser cannon'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/UnrepairedLaserCannon.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'UnrepairedLaserCannon.png'))
+    elif(arg == 'nightfall'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/NightFall.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'NightFall.png'))
+    elif(arg == 'bloodweep'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BloodWeep.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BloodWeep.png'))
+    elif(arg == 'terror cry'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/TerrorCry.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'TerrorCry.png'))
+    elif(arg == 'dark eagle'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/DarkEagle.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'DarkEagle.png'))
+    elif(arg == 'malfunctitoning blaster'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/MalfunctioningBlaster.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'MalfunctioningBlaster.png'))
+    elif(arg == 'sweetie'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Sweetie.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Sweetie.png'))
+    elif(arg == 'ejection blast'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/EjectionBlast.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'EjectionBlast.png'))
+    elif(arg == 'last resort vulcan'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/LastResortVulcan.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'LastResortVulcan.png'))
+    elif(arg == 'damaged armor annihilator'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/DamagedArmorAnnihilator.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'DamagedArmorAnnihilator.png'))
+    elif(arg == 'rock polisher'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/RockPolisher.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'RockPolisher.png'))
+        
+    #heat [28]
+    elif(arg == 'distance controller'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/DistanceController.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'DistanceController.png'))
+    elif(arg == 'heronmark'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/HeronMark.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'HeronMark.png'))
+    elif(arg == 'terrorblade'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/TerrorBlade.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'TerrorBlade.png'))
+    elif(arg == 'flamimg hammer'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/FlamingHammer.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'FlamingHammer.png'))
+    elif(arg == 'overcooking oven'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/OvercookingOven.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'OvercookingOven.png'))
+    elif(arg == 'chaos bringer'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/ChaosBringer.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'ChaosBringer.png'))
+    elif(arg == 'crimson rapture'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/CrimsonRapture.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'CrimsonRapture.png'))
+    elif(arg == 'reckoning'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Reckoning.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Reckoning.png'))
+    elif(arg == 'magma recoiler'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/MagmaRecoiler.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'MagmaRecoiler.png'))
+    elif(arg == 'basalt dissolver'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BasaltDissolver.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BasaltDissolver.png'))
+    elif(arg == 'broken devourer'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BrokenDevourer.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BrokenDevourer.png'))
+    elif(arg == 'magma blast'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/MagmaBlast.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'MagmaBlast.png'))
+    elif(arg == 'sorrow'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Sorrow.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Sorrow.png'))
+    elif(arg == 'abomination'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Abomination.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Abomination.png'))
+    elif(arg == 'heat bomb'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/HeatBomb.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'HeatBomb.png'))
+    elif(arg == 'shadow wolf'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/ShadowWolf.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'ShadowWolf.png'))
+    elif(arg == 'explosive retreat'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/ExplosiveRetreat.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'ExplosiveRetreat.png'))
+    elif(arg == 'rusty heat blaster'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/RustyHeatBlaster.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'RustyHeatBlaster.png'))
+    elif(arg == 'flaminator'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/Flaminator.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'Flaminator.png'))
+    elif(arg == 'hybrid heat cannon'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/HybridHeatCannon.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'HybridHeatCannon.png'))
+    elif(arg == 'corrupt light'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/CorruptLight.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'CorruptLight.png'))
+    elif(arg == 'dawnblaze'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/DawnBlaze.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'DawnBlaze.png'))
+    elif(arg == 'cracked plasma cannon'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/CrackedPlasmaCannon.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'CrackedPlasmaCannon.png'))
+    elif(arg == 'basalt polisher'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BasaltPolisher.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BasaltPolisher.png'))
+    elif(arg == 'misguided rocket battery'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/MisguidedRocketBattery.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'MisguidedRocketBattery.png'))
+    elif(arg == 'fractured basalt annihilator'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/_1.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, '_1.png'))
+    elif(arg == 'fractured basalt dissolver'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/_%20(12).png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, '_%20(12).png'))
+    elif(arg == 'overcharged rocket battery' ):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/OverchargedRocketBattery.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'OverchargedRocketBattery.png'))
 
+    #energy[26]
+    elif(arg == 'distance generator'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/DistanceGenerator.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'DistanceGenerator.png'))
+    elif(arg == 'unstable power cell' or arg == 'upc'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/UnstablePowerCell.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'UnstablePowerCell.png'))
+    elif(arg == 'brightroar' or arg == 'bright roar'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BrightRoar.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BrightRoar.png'))
+    elif(arg == 'bigdaddy'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BigDaddy.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BigDaddy.png'))
+    elif(arg == 'stormweaver'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/StormWeaver.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'StormWeaver.png'))
+    elif(arg == 'ash creator'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/AshCreator.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'AshCreator.png'))
+    elif(arg == 'viking hammer'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/VikingHammer.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'VikingHammer.png'))
+    elif(arg == 'lightning recoiler'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/LightningRecoiler.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'LightningRecoiler.png'))
+    elif(arg == 'bulldog'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BullDog.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BullDog.png'))
+    elif(arg == 'blizzard dissolver'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BlizzardDissolver.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BlizzardDissolver.png'))
+    elif(arg == 'drunk lightning'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/DrunkLightning.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'DrunkLightning.png'))
+    elif(arg == 'emp'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/EMP.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'EMP.png'))
+    elif(arg == 'mortal bullet'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/MortalBullet.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'MortalBullet.png'))
+    elif(arg == 'last words'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/LastWords.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'LastWords.png'))
+    elif(arg == 'bunker shell'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BunkerShell.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BunkerShell.png'))
+    elif(arg == 'piercing fox'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/PiercingFox.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'PiercingFox.png'))
+    elif(arg == 'evac spark'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/EvacSpark.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'EvacSpark.png'))
+    elif(arg == 'scrapped energy blaster'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/ScrappedEnergyBlaster.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'ScrappedEnergyBlaster.png'))
+    elif(arg == 'malice beam'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/MaliceBeam.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'MaliceBeam.png'))
+    elif(arg == 'ultrabright'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/UltraBright.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'UltraBright.png'))
+    elif(arg == 'hot flash'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/HotFlash.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'HotFlash.png'))
+    elif(arg == 'hybrid energy cannon'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/HybridEnergyCannon.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'HybridEnergyCannon.png'))
+    elif(arg == 'lightning cutter'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/LightningCutter.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'LightningCutter.png'))
+    elif(arg == 'obsolete energy cannon'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/ObsoleteEnergyCannon.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'ObsoleteEnergyCannon.png'))
+    elif(arg == 'broken blizzard dissolver'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/BrokenBlizzardDissolver.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, 'BrokenBlizzardDissolver.png'))
+    elif(arg == 'broken blizzard annihilator'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/side%20weapons/__.png') as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await ctx.send(file=discord.File(data, '__.png'))
 #used to find the link of a youtuber
 @client.command()
 async def link(ctx, *, arg):
