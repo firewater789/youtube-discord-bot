@@ -44,7 +44,7 @@ async def help(ctx, arg):
             help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag')
             help.add_field(name = 'special Commands', value = 'working on it')
             help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
-    else:
+    elif(arg == '')
             help = discord.Embed(title='These are the possible help commands.', 
             color=discord.Colour.dark_blue())
             help.add_field(name = '!help png', value = 'This will help you on how to use the **!png** command please do **!help png to learn more**', inline = False)
