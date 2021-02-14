@@ -69,8 +69,7 @@ legs = ['massive lava feet',
         'rolling beasts',
         'the claw']
 
-sideWeapons = ['**physical [23]**',
-            'perimeter protector',
+sideWeapons = ['perimeter protector',
             'back breaker',
             'disintegration',  
             'war hammer',    
@@ -93,7 +92,6 @@ sideWeapons = ['**physical [23]**',
             'sweetie',            
             'ejection blast',
             'last resort vulcan',
-            '**heat[28]**',
             'distance controller',
             'heronmark',        
             'terrorblade',      
@@ -122,7 +120,6 @@ sideWeapons = ['**physical [23]**',
             'fractured basalt annihilator',
             'fractured basalt dissolver',
             'overcharged rocket battery', 
-            '**Energy[26]**',  
             'distance generator',
             'unstable power cell',
             'brightroar', 
@@ -241,12 +238,12 @@ async def png(ctx, *, arg):
         await bot_channel.send(embed=png_legs)
     elif(arg == 'side weapons' or arg == 'side weapon'):
         png_sideWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_sideWeapons.add_field(name = 'side weapons', value = '\n'.join(topWeapons))
+        png_sideWeapons.add_field(name = 'side weapons', value = '\n'.join(sideWeapons))
         png_sideWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_sideWeapons)
     elif(arg == 'top weapons' or arg == 'top weapon'):
         png_topWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_topWeapons.add_field(name = 'top weapons', value = '\n'.join(sideWeapons))
+        png_topWeapons.add_field(name = 'top weapons', value = '\n'.join(topWeapons))
         png_topWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_topWeapons)
     elif(arg == 'drones' or arg == 'drone'):
