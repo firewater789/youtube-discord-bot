@@ -36,31 +36,22 @@ async def on_ready():
     await main_channel.send('ready')
     print('Bot is active')
 
-#used for testing
-@client.command()
-async def test(ctx):
-    test = discord.Embed(title='This is being used for testing', description = 'Still being used for test', color=discord.Colour.blue())
-    test.insert_field_at(5, name = 'test1', value = 'test', inline = True)
-    test.insert_field_at(4, name = 'test1', value = 'test', inline = True)
-    test.insert_field_at(3, name = 'test1', value = 'test', inline = True)
-    test.insert_field_at(2, name = 'test1', value = 'test', inline = True)
-    test.insert_field_at(1, name = 'test1', value = 'test', inline = True)
-    test.insert_field_at(8, name = 'test1', value = 'test', inline = True)
-    await ctx.send(embed=test)
-
-
-
 #used to find commands that the bot has
 @client.command()
-async def help(ctx):
-    help = discord.Embed(title='This is the help menu, below are the different commands that are possible.', 
-    color=discord.Colour.dark_blue())
-    help.add_field(name = '!png', value = 'this is used to get png of certain things in the game\nHow to use it: **!png thing**\nFor example: **!png rank 7 box**\nTo access list use: **!png list**', inline = False)
-    help.add_field(name = '!ping', value = 'this is used to get the ping of the bot\nHow to use it: **!ping**', inline = False)
-    help.add_field(name = '!link', value = 'this is used to get the link of certain youtubers\nHow to use it: **!link youtuber name**\nFor example: **!link firewater789**', inline = False)
-    help.add_field(name = '!sub', value = 'it doesnt work good but you can try', inline = False)
-    help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
-    await ctx.send(embed=help)
+async def help(ctx, arg):
+    if(arg == 'png'):
+            help = discord.Enbed(title = 'This is the !help png menu.')
+            help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag')
+            help.add_field(name = 'special Commands', value = 'working on it')
+            help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+    else:
+            help = discord.Embed(title='These are the possible help commands.', 
+            color=discord.Colour.dark_blue())
+            help.add_field(name = '!help png', value = 'This will help you on how to use the **!png** command please do **!help png to learn more**', inline = False)
+            help.add_field(name = '!help ping', value = 'This will help you on how to use the **!ping** command please do **!help ping to learn more**', inline = False)
+            help.add_field(name = '!help link', value = 'This will help you on how to use the **!link** command please do **!help link to learn more**', inline = False)
+            help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+            await ctx.send(embed=help)
 
 #used to find the ping of the bot
 @client.command()
