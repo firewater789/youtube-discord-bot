@@ -71,7 +71,7 @@ async def ping(ctx):
 
 @client.command()
 async def omg(ctx, name):
-    ctx.send('OMG IS IT THE REAL ' + name +', IM YOUR BIGGEST FAN PLEASE SIGN MY LEFT NUT')
+    await ctx.send('OMG IS IT THE REAL ' + name +', IM YOUR BIGGEST FAN PLEASE SIGN MY LEFT NUT')
 
 #used to find png of stuff in the game
 @client.command()
