@@ -58,7 +58,7 @@ async def ping(ctx):
 @client.command()
 async def png(ctx, *, arg):
     if(arg == 'help'):
-        png_help = discord.Embed(title = 'This is the !help png menu.')
+        png_help = discord.Embed(title = 'This is the !png help menu.')
         png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag')
         png_help.add_field(name = 'special Commands', value = 'Please do **!png list** for the list of commands')
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
@@ -1315,7 +1315,12 @@ async def png(ctx, *, arg):
 #used to find the link of a youtuber
 @client.command()
 async def link(ctx, *, arg):
-    if(arg == 'firewater789'):
+    if(arg == 'help'):
+        link = discord.Embed(title = 'This is the !link help menu.')
+        link.add_field(name = 'How to use it?', value = 'use it like this: !link (SmYoutuberName)\nFor example: !link firewater789')
+        link.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await ctx.send(embed=link)
+    elif(arg == 'firewater789'):
         await ctx.send('https://www.youtube.com/channel/UCoku4b76Dhs-xZbrkmwidUQ')
     elif(arg == 'Atusiff' or arg == 'atusiff'):
         await ctx.send('https://www.youtube.com/channel/UCk4OvXT494YJWpdVaJwvWyQ')
