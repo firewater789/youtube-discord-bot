@@ -231,47 +231,47 @@ async def png(ctx, *, arg):
         await bot_channel.send(embed=png_help)
     elif(arg == 'torsos' or arg == 'torso'):
         png_torsos = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_torsos.add_field(name = 'Torso', value = '\n'.join(torsos))
+        png_torsos.add_field(name = 'Torsos', value = '\n'.join(torsos))
         png_torsos.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_torsos)
     elif(arg == 'legs' or arg == 'leg'):
         png_legs = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_legs.add_field(name = 'Torso', value = '\n'.join(legs))
+        png_legs.add_field(name = 'Legs', value = '\n'.join(legs))
         png_legs.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_legs)
     elif(arg == 'side weapons' or arg == 'side weapon'):
         png_sideWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_sideWeapons.add_field(name = 'Torso', value = '\n'.join(sideWeapons))
+        png_sideWeapons.add_field(name = 'side weapons', value = '\n'.join(topWeapons))
         png_sideWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_sideWeapons)
     elif(arg == 'top weapons' or arg == 'top weapon'):
         png_topWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_topWeapons.add_field(name = 'Torso', value = '\n'.join(topWeapons))
+        png_topWeapons.add_field(name = 'top weapons', value = '\n'.join(sideWeapons))
         png_topWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_topWeapons)
     elif(arg == 'drones' or arg == 'drone'):
         png_drones = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_drones.add_field(name = 'Torso', value = '\n'.join(drones))
+        png_drones.add_field(name = 'drones', value = '\n'.join(drones))
         png_drones.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_drones)
     elif(arg == 'specials' or arg == 'special'):
         png_specials = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_specials.add_field(name = 'Torso', value = '\n'.join(specials))
+        png_specials.add_field(name = 'specials', value = '\n'.join(specials))
         png_specials.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_specials)
     elif(arg == 'modules' or arg == 'module'):
         png_modules = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_modules.add_field(name = 'Torso', value = '\n'.join(modules))
+        png_modules.add_field(name = 'modules', value = '\n'.join(modules))
         png_modules.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_modules)
     elif(arg == 'mechs' or arg == 'mech'):
         png_mechs = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_mechs.add_field(name = 'Torso', value = '\n'.join(mechs))
+        png_mechs.add_field(name = 'mechs', value = '\n'.join(mechs))
         png_mechs.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_mechs)
     elif(arg == 'clan'):
         png_clan = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
-        png_clan.add_field(name = 'Torso', value = '\n'.join(clan))
+        png_clan.add_field(name = 'clan', value = '\n'.join(clan))
         png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_clan)
     elif(arg == 'boxes'):
