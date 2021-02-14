@@ -209,7 +209,7 @@ async def help(ctx):
         help.add_field(name = '!png help', value = 'This will help you on how to use the **!png** command please do **!png help** to learn more', inline = False)
         help.add_field(name = '!link help', value = 'This will help you on how to use the **!link** command please do **!link help** to learn more', inline = False)
         help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
-        await ctx.bot_channel(embed=help)
+        await bot_channel.send(embed=help)
 
 #used to find the ping of the bot
 @client.command()
