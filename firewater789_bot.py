@@ -1,6 +1,7 @@
 import discord
 import random
 import io
+import os
 import aiohttp
 import urllib.request
 import json
@@ -10,6 +11,8 @@ from discord.ext import commands
 client = commands.Bot(command_prefix = "!")
 client.remove_command('help')
 #discord.Client()
+
+token = os.environ['discord_token']
 
 fortuneBox = ['fortune box', 'fortune box legendary']
 
@@ -275,4 +278,4 @@ async def link(ctx, *, arg):
         await ctx.send(embed=link)
 
 #Rum the client on the server
-client.run('ODAzNzc5MzI2Mjg5Mzc5NDA4.YBCv1A.-zzUCJWSjXm-KrQxgQGGMV5YGwk')
+client.run(token)
