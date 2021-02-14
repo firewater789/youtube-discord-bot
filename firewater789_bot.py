@@ -58,7 +58,7 @@ async def ping(ctx):
 @client.command()
 async def png(ctx, *, arg):
     if(arg == 'help'):
-        png_help = discord.Enbed(title = 'This is the !help png menu.')
+        png_help = discord.Embed(title = 'This is the !help png menu.')
         png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag')
         png_help.add_field(name = 'special Commands', value = 'Please do **!png list** for the list of commands')
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
