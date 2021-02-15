@@ -1552,8 +1552,8 @@ async def png(ctx, *, arg):
 async def link(ctx, *, arg):
     bot_channel = client.get_channel(810634146727723019)
     if(arg == 'list'):
-        link_list = discord.Embed(title = 'This is the !link list menu.')
-        link_list.add_field(name = 'How to use it?', value = '\n'.join(youtubers), inline = False)
+        link_list = discord.Embed(title = 'This is the !link list menu.', color=discord.Colour.red())
+        link_list.add_field(name = 'Here is a list of Youtubers', value = '\n'.join(youtubers), inline = False)
         link_list.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=link_list)                  
     elif(arg == 'help'):
