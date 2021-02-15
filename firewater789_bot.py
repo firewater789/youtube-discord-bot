@@ -14,11 +14,52 @@ client.remove_command('help')
 
 token = os.environ['discord_token']
 
-youtubers = ['Atusiff',
-            'tacocat',
-            'windforge',
+youtubers = ['AEROST',
+            'Alex2040 bR',
+            'ambroise',
+            'Atusiff',
+            'bestplayeroftheworld',
+            'BossParody SM',
+            'Chinaski',
+            'CHIPS',
+            'CleverNameSM',
+            'ClockLiuOG',
+            'DOOM BRINGER',
+            'Dwightx',
+            'epicspeedster',
+            'FAIOLA GAMES',
+            'firewater789',
+            'Fyrestare',
+            'Hauer Horatio',
+            'iDani RF',
+            'JIYOON',
+            'L4K3',
+            'Laszeski',
+            'Lookotza' ,
+            'Madao san']
+
+youtubers2 = ['MakeHappyVideos',
+            'MAX GAMES',
+            'Solitaire',
+            'Moretusiff',
+            'nullification zealot',
+            'Pizza4UAndMe',
+            'PRO Sm',
+            'Purific',
             'Pyra Pinky-K',
-            'Lookotza']
+            'Rambo Gaming',
+            'S.A.M',
+            'simpleon',
+            'Smulated ace',
+            'Stefan Ludak',
+            'SuperMechs Helper',
+            'tacocat',
+            'Unlucky Joe',
+            'WarrMachine',
+            'WindForge',
+            'WLGang Clan',
+            'ZeRo',
+            'Zoner']
 
 fortuneBox = ['fortune box', 'fortune box legendary']
 
@@ -1548,12 +1589,13 @@ async def png(ctx, *, arg):
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'topResistanceEnergy.png'))
 #used to find the link of a youtuber
-@client.command()
+@client.command() 
 async def link(ctx, *, arg):
     bot_channel = client.get_channel(810634146727723019)
     if(arg == 'list'):
         link_list = discord.Embed(title = 'This is the !link list menu.', color=discord.Colour.red())
-        link_list.add_field(name = 'Here is a list of Youtubers', value = '\n'.join(youtubers), inline = False)
+        link_list.add_field(name = 'Here is a list of Youtubers', value = '\n'.join(youtubers), inline = True)
+        link_list.add_field(value = '\n'.join(youtubers2), inline = True)
         link_list.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=link_list)                  
     elif(arg == 'help'):
