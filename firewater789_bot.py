@@ -232,15 +232,70 @@ topWeapons = ['frantic brute',
             'iron frenzy',
             'vandal rage',
             'grim cobra',
-            'vailent sniper',
+            'valiant sniper',
             'delerium',
             'overcompressed disintegration',
             'overheated heat bomb',
             'overloaded emp']
 
-drones = ['N/A']
-specials = ['N/A']
-modules = ['N/A']
+drones = ['tonto'
+            'firefly',
+            'electrolyte',
+            'void',
+            'clash',
+            'snack',
+            'solar torch',
+            'flame spear',
+            'rail gun',
+            'hurlbat',
+            'nemo',
+            'torment',
+            'greedy',
+            'swoop',
+            'windforge',
+            'dustmaker',
+            'murmur',
+            'anguish',
+            'backstabber',
+            'flamewave',
+            'shockwave',
+            'selfish protector',
+            'backstabbing protector',
+            'unreliable protector',
+            'selfish guardian',
+            'backstabbing guardian',
+            'unreliable guardian',
+            'heat point',
+            'face shocker']
+
+specials = ['advanced teleporter',
+            'double teleporter',
+            'charge engine',
+            'superb charge engine',
+            'platinum grappling hook',
+            'flaming grappling hook',
+            'shocking grapping hook']
+
+modules = ['heat engine',
+            'heat storage unit',
+            'cooling mass booster',
+            'energy engine',
+            'energy storage unit',
+            'energy mass booster',
+            'quad core booster',
+            'combined engine unit',
+            'combined storage unit',
+            'overload preventor',
+            'platinum fortress',
+            'mighty protector',
+            'plasma fortress',
+            'ultrahot protector',
+            'electric fortress',
+            'supercharge protector',
+            'defence matrix',
+            'maximum protector',
+            'platinum plating']
+
 mechs = ['god mode']
 clan = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye']
 
@@ -281,47 +336,47 @@ async def png(ctx, *, arg):
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_help)
     elif(arg == 'torsos' or arg == 'torso'):
-        png_torsos = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_torsos = discord.Embed(title = 'Torsos png', description = 'Here is a list of all torsos png that are in the code as of right now')
         png_torsos.add_field(name = 'Torsos', value = '\n'.join(torsos))
         png_torsos.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_torsos)
     elif(arg == 'legs' or arg == 'leg'):
-        png_legs = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_legs = discord.Embed(title = 'Legs png', description = 'Here is a list of all legs png that are in the code as of right now')
         png_legs.add_field(name = 'Legs', value = '\n'.join(legs))
         png_legs.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_legs)
     elif(arg == 'side weapons' or arg == 'side weapon'):
-        png_sideWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of commands for side weapons')
+        png_sideWeapons = discord.Embed(title = 'side weapons commands', description = 'Here is a list of commands for side weapons')
         png_sideWeapons.add_field(name = 'side weapons', value = '!png side weapons physical\n!png side weapons heat\n!png side weapons energy')
         png_sideWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_sideWeapons)
     elif(arg == 'side weapons physical' or arg == 'side weapon physical'):
-        png_sideWeaponsPhysical = discord.Embed(title = 'List of all Physical side weapons png', description = 'Here is a list of all physical side weapons png that are in the code as of right now')
+        png_sideWeaponsPhysical = discord.Embed(title = 'Physical Side Weapons png', description = 'Here is a list of all physical side weapons png that are in the code as of right now')
         png_sideWeaponsPhysical.add_field(name = 'Physical side weapons', value = '\n'.join(sideWeaponsPhysical))
         png_sideWeaponsPhysical.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_sideWeaponsPhysical)
     elif(arg == 'side weapons heat' or arg == 'side weapon heat'):
-        png_sideWeaponsHeat = discord.Embed(title = 'List of all Heat side weapons png', description = 'Here is a list of all heat side weapons png that are in the code as of right now')
+        png_sideWeaponsHeat = discord.Embed(title = 'Heat Side Weapons png', description = 'Here is a list of all heat side weapons png that are in the code as of right now')
         png_sideWeaponsHeat.add_field(name = 'Heat side weapons', value = '\n'.join(sideWeaponsHeat))
         png_sideWeaponsHeat.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_sideWeaponsHeat)
     elif(arg == 'side weapons energy' or arg == 'side weapon energy'):
-        png_sideWeaponsEnergy = discord.Embed(title = 'List of all Energy side weapons png', description = 'Here is a list of all energy side weapons png that are in the code as of right now')
+        png_sideWeaponsEnergy = discord.Embed(title = 'Energy Side Weapons png', description = 'Here is a list of all energy side weapons png that are in the code as of right now')
         png_sideWeaponsEnergy.add_field(name = 'Energy side weapons', value = '\n'.join(sideWeaponsEnergy))
         png_sideWeaponsEnergy.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_sideWeaponsEnergy)
     elif(arg == 'top weapons' or arg == 'top weapon'):
-        png_topWeapons = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_topWeapons = discord.Embed(title = 'Top Weapons png', description = 'Here is a list of all top weapons png that are in the code as of right now')
         png_topWeapons.add_field(name = 'top weapons', value = '\n'.join(topWeapons))
         png_topWeapons.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_topWeapons)
     elif(arg == 'drones' or arg == 'drone'):
-        png_drones = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_drones = discord.Embed(title = 'Drones png', description = 'Here is a list of all drones png that are in the code as of right now')
         png_drones.add_field(name = 'drones', value = '\n'.join(drones))
         png_drones.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_drones)
     elif(arg == 'specials' or arg == 'special'):
-        png_specials = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_specials = discord.Embed(title = 'Specials png', description = 'Here is a list of all specials png that are in the code as of right now')
         png_specials.add_field(name = 'specials', value = '\n'.join(specials))
         png_specials.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_specials)
@@ -331,17 +386,17 @@ async def png(ctx, *, arg):
         png_modules.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_modules)
     elif(arg == 'mechs' or arg == 'mech'):
-        png_mechs = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_mechs = discord.Embed(title = 'Modules png', description = 'Here is a list of all modules png that are in the code as of right now')
         png_mechs.add_field(name = 'mechs', value = '\n'.join(mechs))
         png_mechs.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_mechs)
     elif(arg == 'clan'):
-        png_clan = discord.Embed(title = 'List of all torsos png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_clan = discord.Embed(title = 'Clan png', description = 'Here is a list of all clan png that are in the code as of right now')
         png_clan.add_field(name = 'clan', value = '\n'.join(clan))
         png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_clan)
     elif(arg == 'boxes'):
-        png_boxes = discord.Embed(title = 'List of all box png', description = 'Here is a list of all box png that are in the code as of right now')
+        png_boxes = discord.Embed(title = 'Box png', description = 'Here is a list of all box png that are in the code as of right now')
         png_boxes.add_field(name = 'Fortune box', value = '\n'.join(fortuneBox), inline = True)
         png_boxes.add_field(name = 'Premium Box', value = '\n'.join(premiumBox), inline = True)
         png_boxes.add_field(name = 'Premium Pack', value = '\n'.join(premiumPack), inline = True)
@@ -1532,7 +1587,7 @@ async def png(ctx, *, arg):
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'GrimCobra.png'))
-    elif(arg == 'vailent sniper'):
+    elif(arg == 'valiant sniper'):
         async with aiohttp.ClientSession() as session:
             async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/top%20weapon/ValiantSniper.png') as resp:
                 if resp.status != 200:
