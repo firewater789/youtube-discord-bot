@@ -1545,7 +1545,12 @@ async def png(ctx, *, arg):
 @client.command()
 async def link(ctx, *, arg):
     bot_channel = client.get_channel(810634146727723019)
-    if(arg == 'help'):
+    if(arg == 'list'):
+        link_list = discord.Embed(title = 'This is the !link list menu.')
+        link_list.add_field(name = 'How to use it?', value = '\n'.join(youtubers), inline = False)
+        link_list.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=link_list)                  
+    elif(arg == 'help'):
         link = discord.Embed(title = 'This is the !link help menu.')
         link.add_field(name = 'How to use it?', value = 'use it like this: !link (SmYoutuberName)\nFor example: !link firewater789')
         link.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
