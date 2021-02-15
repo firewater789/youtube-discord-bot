@@ -14,6 +14,12 @@ client.remove_command('help')
 
 token = os.environ['discord_token']
 
+youtubers = ['Atusiff',
+            'tacocat',
+            'windforge',
+            'Pyra Pinky-K',
+            'Lookotza']
+
 fortuneBox = ['fortune box', 'fortune box legendary']
 
 premiumBox = ['premium box', 'premium box legendary']
