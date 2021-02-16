@@ -600,14 +600,14 @@ async def png(ctx, *, arg):
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'supermechs.png'))
-     elif(arg == 'legendary card'):
+    elif(arg == 'legendary card'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/legendaryCard.jpg") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'legendaryCard.jpg'))
-     elif(arg == 'token'):
+    elif(arg == 'token'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/token.png") as resp:
                 if resp.status != 200:
