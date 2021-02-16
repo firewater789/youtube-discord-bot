@@ -67,6 +67,8 @@ premiumBox = ['premium box', 'premium box legendary']
 
 premiumPack = ['premium pack', 'premium pack legendary']
 
+supremeChest = ['supreme chest', 'supreme chest legendary']
+
 itemBoxes = ['item box', 'item box legendary', 'sliver box', 'sliver box legendary']
 
 arenaBoxes = ['rank 1 box', 'rank 1 box legendary', 'rank 3 box', 'rank 3 box legendary', 'rank 5 box', 'rank 5 box legendary', 
@@ -400,6 +402,7 @@ async def png(ctx, *, arg):
         png_boxes.add_field(name = 'Fortune box', value = '\n'.join(fortuneBox), inline = True)
         png_boxes.add_field(name = 'Premium Box', value = '\n'.join(premiumBox), inline = True)
         png_boxes.add_field(name = 'Premium Pack', value = '\n'.join(premiumPack), inline = True)
+        png_boxes.add_field(name = 'Supreme chest', value = '\n'.join(supremeChest), inline = True)
         png_boxes.add_field(name = 'Arena Boxes', value = '\n'.join(arenaBoxes), inline = True)
         png_boxes.add_field(name = 'Item and Sliver Boxes', value = '\n'.join(itemBoxes), inline = True)
         png_boxes.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
@@ -452,7 +455,27 @@ async def png(ctx, *, arg):
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'premiumBox.png'))
     elif(arg == 'premium box legendary'):
-        await bot_channel.send('no png yet')
+         async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/premiumBoxLegendary.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'premiumBoxLegendary.png'))
+    #Supreme chest
+    elif(arg == 'supreme chest'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/supremeChest.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'supremeChest.PNG'))
+    elif(arg == 'supreme chest legendary'):
+         async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/supremeChestLegendary.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'supremeChestLegendary.PNG'))
     #fortune box
     elif(arg == 'fortune box'):
         async with aiohttp.ClientSession() as session:
