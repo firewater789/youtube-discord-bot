@@ -411,9 +411,10 @@ async def png(ctx, *, arg):
         png_boxes.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_boxes)
     elif(arg == 'other'):
-        png_torsos = discord.Embed(title = 'Other png', description = 'Here is a list of all of the other png that are in the code as of right now')
-        png_torsos.add_field(name = 'Others', value = '\n'.join(other))
-        png_torsos.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        png_other = discord.Embed(title = 'Other png', description = 'Here is a list of all of the other png that are in the code as of right now')
+        png_other.add_field(name = 'Others', value = '\n'.join(other))
+        png_other.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=png_other)
     elif(arg == 'item box' or arg == 'mix box'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png") as resp:
