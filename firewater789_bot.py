@@ -299,7 +299,10 @@ modules = ['heat engine',
             'platinum plating']
 
 mechs = ['god mode']
-clan = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye']
+
+clan = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye', 'trolls fast', 'reign']
+
+other = ['token', 'legendary card', 'rank 1', 'rank 2']
 
 #used to know when the bot goes online
 @client.event
@@ -334,7 +337,7 @@ async def png(ctx, *, arg):
     if(arg == 'help'):
         png_help = discord.Embed(title = 'This is the !png help menu.')
         png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag', inline = False)
-        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan', inline = False)
+        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan\n!png other', inline = False)
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_help)
     elif(arg == 'torsos' or arg == 'torso'):
@@ -407,6 +410,10 @@ async def png(ctx, *, arg):
         png_boxes.add_field(name = 'Item and Sliver Boxes', value = '\n'.join(itemBoxes), inline = True)
         png_boxes.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_boxes)
+    elif(arg == 'other'):
+        png_torsos = discord.Embed(title = 'Other png', description = 'Here is a list of all of the other png that are in the code as of right now')
+        png_torsos.add_field(name = 'Others', value = '\n'.join(other))
+        png_torsos.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
     elif(arg == 'item box' or arg == 'mix box'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png") as resp:
@@ -563,10 +570,28 @@ async def png(ctx, *, arg):
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'wlgangFlag.png'))
-  
+    elif(arg == 'reign'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/RR.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'RR.png'))
+    elif(arg == 'trolls fast'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/trollsFast.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'trollsFast.png'))                      
     #mechs
     elif(arg == 'god mode'):
-        await ctx.send(file=discord.File('godMode.png'))
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/godMode.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'godMode.png'))
     #other
     elif(arg == 'logo' or arg == 'supermechs'):
         async with aiohttp.ClientSession() as session:
@@ -575,6 +600,34 @@ async def png(ctx, *, arg):
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'supermechs.png'))
+     elif(arg == 'legendary card'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/legendaryCard.jpg") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'legendaryCard.jpg'))
+     elif(arg == 'token'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/token.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'token.png'))   
+    elif(arg == 'rank 1'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/rank1.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'rank1.PNG')) 
+    elif(arg == 'rank 2'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/rank2.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'rank2.PNG'))                     
     #Torsos
     elif(arg == 'interceptor'):
         async with aiohttp.ClientSession() as session:
