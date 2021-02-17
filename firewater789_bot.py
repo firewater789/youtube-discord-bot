@@ -341,7 +341,7 @@ async def png(ctx, *, arg):
     if(arg == 'help'):
         png_help = discord.Embed(title = 'This is the !png help menu.')
         png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag', inline = False)
-        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan\n!png other\n!png upgrade', inline = False)
+        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan\n!png other\n!png upgrade\n!png backgrounds and floors', inline = False)
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_help)
     elif(arg == 'torsos' or arg == 'torso'):
@@ -409,7 +409,7 @@ async def png(ctx, *, arg):
         png_clan.add_field(name = 'upgrade stuff', value = '\n'.join(upgrade))
         png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_clan)
-    elif(arg == 'backgrounds and floors'):
+    elif(arg == 'backgrounds and floors' or arg == 'backgrounds' or arg == 'floors):
         png_clan = discord.Embed(title = 'backgrounds and floors png', description = 'Here is a list of all backgrounds and floors png that are in the code as of right now')
         png_clan.add_field(name = 'backgrounds', value = '\n'.join(backgrounds))
         png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
