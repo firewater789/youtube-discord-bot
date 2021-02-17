@@ -302,7 +302,7 @@ mechs = ['god mode']
 
 clan = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye', 'trolls fast', 'reign']
 
-other = ['token', 'legendary card', 'rank 1', 'rank 2']
+other = ['token', 'legendary card', 'rank 1', 'rank 2', 'rank 3', 'rank 4', 'rank 5', 'rank 6', 'rank 7', 'rank 8', 'rank 9']
 
 #used to know when the bot goes online
 @client.event
@@ -617,18 +617,67 @@ async def png(ctx, *, arg):
                 await bot_channel.send(file=discord.File(data, 'token.png'))   
     elif(arg == 'rank 1'):
         async with aiohttp.ClientSession() as session:
-            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/rank1.PNG") as resp:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r1.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await bot_channel.send(file=discord.File(data, 'rank1.PNG')) 
+                await bot_channel.send(file=discord.File(data, 'r1.png')) 
     elif(arg == 'rank 2'):
         async with aiohttp.ClientSession() as session:
-            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/rank2.PNG") as resp:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r2.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await bot_channel.send(file=discord.File(data, 'rank2.PNG'))                     
+                await bot_channel.send(file=discord.File(data, 'r2.png')) 
+    elif(arg == 'rank 3'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r3.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'r3.png')) 
+    elif(arg == 'rank 4'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r4.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'r4.png'))   
+    elif(arg == 'rank 5'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r5.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'r5.png')) 
+    elif(arg == 'rank 6'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r6.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'r6.png'))   
+    elif(arg == 'rank 7'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r7.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'r7.png')) 
+    elif(arg == 'rank 8'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r8.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'r8.png'))
+    elif(arg == 'rank 9'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/r9.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'r9.png'))                          
     #Torsos
     elif(arg == 'interceptor'):
         async with aiohttp.ClientSession() as session:
