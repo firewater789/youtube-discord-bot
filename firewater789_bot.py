@@ -304,6 +304,10 @@ clan = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye', 'trolls fast', 're
 
 other = ['token', 'legendary card', 'rank 1', 'rank 2', 'rank 3', 'rank 4', 'rank 5', 'rank 6', 'rank 7', 'rank 8', 'rank 9']
 
+upgrade = ['common power kit', 'rare power kit', 'epic power kit', 'legendary power kit', 'mass select']
+
+backgroundsAndFloor = ['background 1', 'background 2', 'background 3', 'background 4', 'background 5', 
+                      'background 6', 'background 7', 'background 8', 'background 9', 'background 10',]
 #used to know when the bot goes online
 @client.event
 async def on_ready():
@@ -337,7 +341,7 @@ async def png(ctx, *, arg):
     if(arg == 'help'):
         png_help = discord.Embed(title = 'This is the !png help menu.')
         png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag', inline = False)
-        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan\n!png other', inline = False)
+        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan\n!png other\n!png upgrade', inline = False)
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_help)
     elif(arg == 'torsos' or arg == 'torso'):
@@ -398,6 +402,11 @@ async def png(ctx, *, arg):
     elif(arg == 'clan'):
         png_clan = discord.Embed(title = 'Clan png', description = 'Here is a list of all clan png that are in the code as of right now')
         png_clan.add_field(name = 'clan', value = '\n'.join(clan))
+        png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=png_clan)
+    elif(arg == 'upgrade'):
+        png_clan = discord.Embed(title = 'upgrade png', description = 'Here is a list of all upgrade png that are in the code as of right now')
+        png_clan.add_field(name = 'upgrade stuff', value = '\n'.join(upgrade))
         png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_clan)
     elif(arg == 'boxes'):
@@ -677,7 +686,43 @@ async def png(ctx, *, arg):
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await bot_channel.send(file=discord.File(data, 'r9.png'))                          
+                await bot_channel.send(file=discord.File(data, 'r9.png'))  
+    #upgrade stuff                   
+    elif(arg == 'common power kit'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/commonPowerKit.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'commonPowerKit.PNG'))
+    elif(arg == 'rare power kit'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/rarePowerKit.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'rarePowerKit.PNG'))
+    elif(arg == 'epic power kit'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/epicPowerKit.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'epicPowerKit.PNG'))
+    elif(arg == 'legendary power kit'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/legendaryPowerKit.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'legendaryPowerKit.PNG'))
+    elif(arg == 'mass select'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/massSelect.jpg") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'massSelect.jpg'))                        
     #Torsos
     elif(arg == 'interceptor'):
         async with aiohttp.ClientSession() as session:
