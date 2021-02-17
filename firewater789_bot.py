@@ -409,7 +409,7 @@ async def png(ctx, *, arg):
         png_clan.add_field(name = 'upgrade stuff', value = '\n'.join(upgrade))
         png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_clan)
-    elif(arg == 'backgrounds and floors' or arg == 'backgrounds' or arg == 'floors):
+    elif(arg == 'backgrounds and floors' or arg == 'backgrounds' or arg == 'floors'):
         png_clan = discord.Embed(title = 'backgrounds and floors png', description = 'Here is a list of all backgrounds and floors png that are in the code as of right now')
         png_clan.add_field(name = 'backgrounds', value = '\n'.join(backgrounds))
         png_clan.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
