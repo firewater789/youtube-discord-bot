@@ -14,6 +14,14 @@ client.remove_command('help')
 
 token = os.environ['discord_token']
 
+def png(link, image):
+    async with aiohttp.ClientSession() as session:
+                async with session.get(link) as resp:
+                    if resp.status != 200:
+                        return await ctx.send('Could not download file...')
+                    data = io.BytesIO(await resp.read())
+                    await bot_channel.send(file=discord.File(data, image))
+
 youtubers = ['AEROST',
             'Alex2040 bR',
             'ambroise',
@@ -424,18 +432,13 @@ async def png(ctx, *, arg):
         png_boxes.add_field(name = 'Item and Sliver Boxes', value = '\n'.join(itemBoxes), inline = True)
         png_boxes.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_boxes)
-    elif(arg == 'other'):
+    elif(arg == 'other'):https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png
         png_other = discord.Embed(title = 'Other png', description = 'Here is a list of all of the other png that are in the code as of right now')
         png_other.add_field(name = 'Others', value = '\n'.join(other))
         png_other.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_other)
     elif(arg == 'item box' or arg == 'mix box'):
-        async with aiohttp.ClientSession() as session:
-            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png") as resp:
-                if resp.status != 200:
-                    return await ctx.send('Could not download file...')
-                data = io.BytesIO(await resp.read())
-                await bot_channel.send(file=discord.File(data, 'itemBox.png'))
+        png('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png', 'itemBox.png')
     elif(arg == 'item box legendary' or arg == 'mix box legendary'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBoxLegendary.png") as resp:
