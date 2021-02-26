@@ -14,14 +14,6 @@ client.remove_command('help')
 
 token = os.environ['discord_token']
 
-def png(link, image):
-    async with aiohttp.ClientSession() as session:
-                async with session.get(link) as resp:
-                    if resp.status != 200:
-                        return await ctx.send('Could not download file...')
-                    data = io.BytesIO(await resp.read())
-                    await bot_channel.send(file=discord.File(data, image))
-
 youtubers = ['AEROST',
             'Alex2040 bR',
             'ambroise',
@@ -438,7 +430,12 @@ async def png(ctx, *, arg):
         png_other.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_other)
     elif(arg == 'item box' or arg == 'mix box'):
-        png('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png', 'itemBox.png')
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'itemBox.png'))
     elif(arg == 'item box legendary' or arg == 'mix box legendary'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBoxLegendary.png") as resp:
