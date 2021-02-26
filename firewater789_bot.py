@@ -432,7 +432,7 @@ async def png(ctx, *, arg):
         png_boxes.add_field(name = 'Item and Sliver Boxes', value = '\n'.join(itemBoxes), inline = True)
         png_boxes.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_boxes)
-    elif(arg == 'other'):https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png
+    elif(arg == 'other'):
         png_other = discord.Embed(title = 'Other png', description = 'Here is a list of all of the other png that are in the code as of right now')
         png_other.add_field(name = 'Others', value = '\n'.join(other))
         png_other.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
