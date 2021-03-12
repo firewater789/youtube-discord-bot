@@ -6,6 +6,7 @@ import aiohttp
 import urllib.request
 import json
 from discord.ext import commands
+from PIL import Image 
 
 #client (my bot)
 client = commands.Bot(command_prefix = "!")
@@ -429,6 +430,9 @@ async def png(ctx, *, arg):
         png_other.add_field(name = 'Others', value = '\n'.join(other))
         png_other.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_other)
+    elif(arg == 'testing'):
+        im = Image.open("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png")
+        await bot_channel.send(im.show)
     elif(arg == 'item box' or arg == 'mix box'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png") as resp:
