@@ -307,8 +307,19 @@ other = ['token', 'legendary card', 'rank 1', 'rank 2', 'rank 3', 'rank 4', 'ran
 
 upgrade = ['common power kit', 'rare power kit', 'epic power kit', 'legendary power kit', 'mass select']
 
-backgrounds = ['background 1', 'background 2', 'background 3', 'background 4', 'background 5', 
-                      'background 6', 'background 7', 'background 8', 'background 9', 'background 10',]
+backgrounds = ['background space', 'background snow', 'background cave', 'background junkyard', 'background tower', 
+                      'background crane', 'background red desert', 'background unicorn', 'background forest', 'background desert']
+
+buttons = ['arena button',
+            'base button',
+            'campaign button',
+            'clan button',
+            'raid button',
+            'shop button',
+            'upgrade button 1',
+            'upgrade button 2',
+            'workshop button']
+
 #used to know when the bot goes online
 @client.event
 async def on_ready():
@@ -342,7 +353,7 @@ async def png(ctx, *, arg):
     if(arg == 'help'):
         png_help = discord.Embed(title = 'This is the !png help menu.')
         png_help.add_field(name = 'How to use it?', value = 'use it like this: !png (something)\nFor example: !png wlgang flag', inline = False)
-        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules\n!png boxes\n!png mechs\n!png clan\n!png other\n!png upgrade\n!png backgrounds and floors', inline = False)
+        png_help.add_field(name = 'To Find all Possible Png Here are a few Commands.', value = '!png buttons\n!png items\n!png boxes\n!png mechs\n!png clan\n!png other\n!png upgrade\n!png backgrounds and floors', inline = False)
         png_help.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_help)
     elif(arg == 'torsos' or arg == 'torso'):
@@ -430,6 +441,17 @@ async def png(ctx, *, arg):
         png_other.add_field(name = 'Others', value = '\n'.join(other))
         png_other.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
         await bot_channel.send(embed=png_other)
+    elif(arg == 'button' or arg == 'buttons'):
+        png_button = discord.Embed(title = 'Button png', description = 'Here is a list of all button png that are in the code as of right now')
+        png_button.add_field(name = 'Buttons', value = '\n'.join(buttons))
+        png_button.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=png_button)
+    elif(arg == 'item' or arg == 'items'):
+        png_items = discord.Embed(title = 'Item png', description = 'Here is a list of all item png that are in the code as of right now')
+        png_items.add_field(name = 'Items', value = '!png torsos\n!png legs\n!png side weapon\n!png top weapon\n!png drone\n!png specials\n!png modules')
+        png_items.set_footer(icon_url = ctx.author.avatar_url, text =f'Requested by: {ctx.author.name}')
+        await bot_channel.send(embed=png_items)
+
     elif(arg == 'item box' or arg == 'mix box'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/Boxes/itemBox.png") as resp:
@@ -730,76 +752,140 @@ async def png(ctx, *, arg):
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, 'massSelect.jpg'))   
     #Backgrounds
-    elif(arg == 'background 1'):
+    elif(arg == 'background 1' or arg == 'background space'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/1.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '1.png')) 
-    elif(arg == 'background 2'):
+    elif(arg == 'background 2' or arg == 'background snow'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/2.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '2.png'))   
-    elif(arg == 'background 3'):
+    elif(arg == 'background 3' or arg == 'background cave'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/3.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '3.png')) 
-    elif(arg == 'background 4'):
+    elif(arg == 'background 4' or arg == 'background junkyard'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/4.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '4.png'))   
-    elif(arg == 'background 5'):
+    elif(arg == 'background 5' or arg == 'background tower'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/5.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '5.png')) 
-    elif(arg == 'background 6'):
+    elif(arg == 'background 6' or arg == 'background crane'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/6.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '6.png')) 
-    elif(arg == 'background 7'):
+    elif(arg == 'background 7' or arg == 'background red desert'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/7.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '7.png')) 
-    elif(arg == 'background 8'):
+    elif(arg == 'background 8' or arg == 'background unicorn'):
         async with aiohttp.ClientSession() as session:
             async with session.get('https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/8.png') as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '8.png'))   
-    elif(arg == 'background 9'):
+    elif(arg == 'background 9' or arg == 'background forest'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/9.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
                 await bot_channel.send(file=discord.File(data, '9.png')) 
-    elif(arg == 'background 10'):
+    elif(arg == 'background 10' or arg == 'background desert'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/10.png") as resp:
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await bot_channel.send(file=discord.File(data, '10.png'))                           
+                await bot_channel.send(file=discord.File(data, '10.png'))
+    #Buttons
+    elif(arg == 'clan button'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/clan.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'clan.png.PNG'))
+    elif(arg == 'arena button'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/arena.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'arena.png.PNG'))
+    elif(arg == 'base button'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/base.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'base.png.PNG'))
+    elif(arg == 'upgrade button' or arg == 'upgrade button 1'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/upgrade.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'upgrade.png.PNG'))
+    elif(arg == 'upgrade button 2'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/upgrade2.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'upgrade2.png.PNG'))
+    elif(arg == 'workshop button' or arg == 'work shop button'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/workshop.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'workshop.png.PNG'))
+    elif(arg == 'shop button'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/shop.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'shop.png.PNG'))
+    elif(arg == 'campaign button'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/campaign.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'campaign.png.PNG'))
+    elif(arg == 'raid button'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/raid.png.PNG") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'raid.png.PNG'))
     #Torsos
     elif(arg == 'interceptor'):
         async with aiohttp.ClientSession() as session:
