@@ -305,7 +305,8 @@ clan = ['wlgang flag', 'wlgang logo', 'wlgang logo with eye', 'trolls fast', 're
 
 other = ['token', 'legendary card', 'rank 1', 'rank 2', 'rank 3', 'rank 4', 'rank 5', 'rank 6', 'rank 7', 'rank 8', 'rank 9']
 
-upgrade = ['common power kit', 'rare power kit', 'epic power kit', 'legendary power kit', 'mass select']
+upgrade = ['rare banner', 'epic banner', 'legendary banner', 'mythical banner', 'divine banner', 
+           'common power kit', 'rare power kit', 'epic power kit', 'legendary power kit', 'mass select']
 
 backgrounds = ['background space', 'background snow', 'background cave', 'background junkyard', 'background tower', 
                       'background crane', 'background red desert', 'background unicorn', 'background forest', 'background desert']
@@ -750,7 +751,42 @@ async def png(ctx, *, arg):
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await bot_channel.send(file=discord.File(data, 'massSelect.jpg'))   
+                await bot_channel.send(file=discord.File(data, 'massSelect.jpg'))  
+    elif(arg == 'rare banner'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/RareBanner.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'RareBanner.png'))
+    elif(arg == 'epic banner'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/EpicBanner.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'EpicBanner.png'))
+    elif(arg == 'legendary banner'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/LegendaryBanner.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, ''))
+    elif(arg == 'mythical banner'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/MythicalBanner.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'MythicalBanner.png'))                
+    elif(arg == 'divine banner'):
+        async with aiohttp.ClientSession() as session:
+            async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/DivineBanner.png") as resp:
+                if resp.status != 200:
+                    return await ctx.send('Could not download file...')
+                data = io.BytesIO(await resp.read())
+                await bot_channel.send(file=discord.File(data, 'DivineBanner.png'))         
     #Backgrounds
     elif(arg == 'background 1' or arg == 'background space'):
         async with aiohttp.ClientSession() as session:
