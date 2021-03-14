@@ -772,7 +772,7 @@ async def png(ctx, *, arg):
                 if resp.status != 200:
                     return await ctx.send('Could not download file...')
                 data = io.BytesIO(await resp.read())
-                await bot_channel.send(file=discord.File(data, ''))
+                await bot_channel.send(file=discord.File(data, 'LegendaryBanner.png'))
     elif(arg == 'mythical banner'):
         async with aiohttp.ClientSession() as session:
             async with session.get("https://raw.githubusercontent.com/firewater789/youtube-discord-bot/main/other/MythicalBanner.png") as resp:
